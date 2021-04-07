@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,5 +19,11 @@ public class MyController {
 		model.addAttribute("currentDate" ,new Date());
 		
 		return "about";
+	}
+	
+	@GetMapping("/loop")
+	public String iterateLoop() {
+		System.out.println("inside loop handler");
+		return "iterate";
 	}
 }
