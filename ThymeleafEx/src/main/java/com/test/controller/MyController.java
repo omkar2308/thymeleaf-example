@@ -22,12 +22,18 @@ public class MyController {
 		return "about";
 	}
 	
+<<<<<<< HEAD
 	//iterator handler
 	@GetMapping ("/loop")
 	public String iterateHandler(Model m) {
 		
 		List<String> names = List.of("Akshay","omkar","abhi");
 		m.addAttribute("names",names);
+=======
+	@GetMapping("/loop")
+	public String iterateLoop() {
+		System.out.println("inside loop handler");
+>>>>>>> refs/remotes/origin/akshayDev
 		return "iterate";
 	}
 }
