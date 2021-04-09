@@ -1,0 +1,28 @@
+
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<h1>spring boot project</h1>
+	<h2>learn code with akii</h2>
+	<h2>
+		Name of the owner is : <span th:text="${name}"></span>
+	</h2>
+	<h1>
+		todays date is <span th:text="${currentDate}"></span>
+	</h1>
+	<h1 th:text="${#strings.toUpperCase(name)}"></h1>
+	<h1 th:text="${#strings.length(name)}"></h1>
+	
+	<div th:with ="a=5,b=12, n=${name}">
+	
+	<h1>value of a is : <span th:text="${a}" ></span></h1>
+	<h1>value of n is : <span th:text="${#strings.toUpperCase(n)}" ></span></h1>
+	<h1 th:text="'value of b is '+ ${b}" ></h1>
+		
+	</div>
+</body>
+</html>
