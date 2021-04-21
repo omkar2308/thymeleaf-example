@@ -11,29 +11,41 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class MyController {
-	
+
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
 	public String about(Model model) {
 		System.out.println("inside about handler");
-		
+
 		model.addAttribute("name", "Akshay");
-		model.addAttribute("currentDate" ,new Date());
-		
+		model.addAttribute("currentDate", new Date());
+
 		return "about";
 	}
-	
-<<<<<<< HEAD
-	//iterator handler
-	@GetMapping ("/loop")
-	public String iterateHandler(Model m) {
-		
-		List<String> names = List.of("Akshay","omkar","abhi");
-		m.addAttribute("names",names);
-=======
+
+	// iterator handler
 	@GetMapping("/loop")
-	public String iterateLoop() {
-		System.out.println("inside loop handler");
->>>>>>> refs/remotes/origin/akshayDev
+	public String iterateHandler(Model m) {
+		System.out.println("in loop handler");
+		List<String> names = List.of("Akshay", "omkar", "abhi");
+		m.addAttribute("names", names);
 		return "iterate";
+
 	}
+	
+	//conditional 
+	@GetMapping("/condition")
+	public String conditionHnadler(Model m) {
+		System.out.println("in condition handler");
+		
+		m.addAttribute("isActive",false);   
+		m.addAttribute("gender","M");
+		//m.addAttribute("gender","p");
+		
+		List<Integer> list = List.of(23,55,8);
+		
+		m.addAttribute("mylist",list); 
+		
+		return "condition";
+	}
+
 }

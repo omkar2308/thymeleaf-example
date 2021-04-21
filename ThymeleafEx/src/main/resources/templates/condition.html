@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>condition check</title>
+</head>
+<body>
+	<h1>conditional statement</h1>
+
+	<!--  elvis operator example -->
+	<h1>
+		User is <span th:style="${isActive}  ? 'color:green' : 'color:red' "
+			th:text="${isActive} ?'Active' : 'Not Active'"></span>
+	</h1>
+	
+<!-- if unless condition  -->
+	<h1  th:if="${gender}=='M'"> User is Male</h1>
+	<h1  th:unless="${gender}=='M'"> User is Female</h1>
+	
+<!-- 	switch condition  -->
+<div th:switch= "${#lists.size(mylist)}" >
+	<h1 th:case="'0'"> List contain zero element</h1>
+	<h1 th:case="'1'"> List contain one element</h1>
+	<h1 th:case="*">  List contain more than one element</h1> 
+</div>
+
+
+</body>
+</html>

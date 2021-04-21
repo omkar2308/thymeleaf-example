@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -7,25 +7,25 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>in loop page</h1>
-<h1 th:text="${names}" ></h1>
+	<h1>in loop page</h1>
+	<h1 th:text="${names}"></h1>
 
-<ul>
+	<ul>
 
-<li th:each="n,status :${names}" >
-	<span th:style="${status.odd}? 'font-weight:bold; color:red' " th:text="${status.index+1} +' ' +${n}" ></span>
-</li>
-</ul>
+		<li th:each="n,status :${names}"><span
+			th:style="${status.odd}? 'font-weight:bold; color:red' "
+			th:text="${status.index+1} +' ' +${n}"></span></li>
+	</ul>
 
-=======
-<!DOCTYPE html>
+
+	<!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-  <h1> in loop handeler </h1>
->>>>>>> refs/remotes/origin/akshayDev
+	<h1>in loop handeler</h1>
+
 </body>
 </html>
